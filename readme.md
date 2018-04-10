@@ -29,6 +29,8 @@ To move the window, hover over the edge of the window so the resize arrow appear
 To move the window, make sure Hyper has focus, press <kbd>Alt</kbd>+<kbd>Space</kbd>+<kbd>M</kbd>, then use the <kbd>&uarr;</kbd><kbd>&darr;</kbd><kbd>&larr;</kbd><kbd>&rarr;</kbd> keys to move the window and <kbd>Enter</kbd> to finalise the position.
 After pressing an arrow key at least once, the window will also follow your mouse cursor (this is usually faster than holding down arrow keys).
 
+*The only reason for this fork:* The top left corner now contains a ~40px square region that allows for click and drag window movement on win32 as an alternative for the solution listed above. The region is invisible if only one tab is open. Upon opening additional tabs, the tab selector bar that appears is offset to the right to highlight the click and drag region.
+
 ## Other recommended plugins
 
 - [hyper-dark-scrollbar](https://github.com/moso/hyper-dark-scrollbar)
