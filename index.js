@@ -46,10 +46,39 @@ exports.decorateConfig = (config) => {
     }
   `
 
+    const win32CSS = `
+        .header_shape {
+            display: none;
+        }
+        .header_windowControls {
+            display: none;
+        }
+        .header_appTitle {
+            font-size: 0px;
+        }
+        .header_windowHeader {
+            width: 40px;
+        }
+        .tabs_nav {
+            top: 0px;
+            padding-left: 40px;
+            z-index: 10;
+        }
+        .tabs_nav:after {
+            display: none;
+        }
+        .terms_terms {
+            margin-top: 0;
+        }
+        .terms_termsShifted {
+            margin-top: 40px;
+        }
+    `
+
   return Object.assign({}, config, {
     css: `
       ${config.css || ''}
-      ${process.platform === 'darwin' ? macosCSS : defaultCSS}
+      ${process.platform === 'darwin' ? macosCSS : process.platform === 'win32' ? win32CSS : defaultCSS}
     `
   });
 }
